@@ -47,8 +47,17 @@ describe('hashTable', function() {
     window.getIndexBelowMaxForKey = oldHashFunction;
   });
 
+  it('should return number of key values to size', function() {
+    hashTable.insert('5', 'Barker');
+    hashTable.insert('6', 'Barker');
+    hashTable.insert('7', 'Loblaw');
+    hashTable.insert('8', 'Barker');
+    expect(hashTable.ratio()).to.equal(50);
+  });
+
+
   // (Advanced! Remove the extra "x" when you want the following tests to run)
-  xit ('should double in size when needed', function() {
+  it ('should double in size when needed', function() {
     _.each(people, function(person) {
       var firstName = person[0];
       var lastName = person[1];

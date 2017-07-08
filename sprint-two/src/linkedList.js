@@ -6,14 +6,12 @@ var LinkedList = function() {
   list.addToTail = function(value) {
     
     // 1rst case: we have not head
-    if (list.head === null){
+    if (list.head === null) {
       // head = tail
       list.head = Node(value);
       list.tail = Node(value);
       //console.log('add head/tail', list.head.value);
-    }
-    // 2nd allreday a head
-    else {
+    } else {
       var currentNode = list.head;
       while (currentNode.next) {
         currentNode = currentNode.next;
@@ -33,13 +31,13 @@ var LinkedList = function() {
 
   list.contains = function(target) {
     var currentNode = list.head;
-      while (currentNode) {
-        if (currentNode.value === target){
-          return true;
-        }
-        currentNode = currentNode.next;
+    while (currentNode) {
+      if (currentNode.value === target) {
+        return true;
       }
-      return false;
+      currentNode = currentNode.next;
+    }
+    return false;
   };
   
   return list;

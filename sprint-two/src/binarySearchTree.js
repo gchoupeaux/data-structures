@@ -23,13 +23,13 @@ BinarySearchTree.prototype.insert = function(value) {
 
 BinarySearchTree.prototype.contains = function(target) {
   //check if root is target
-  if (this.value === target){
+  if (this.value === target) {
     return true;
   } else {
-    if (this.right.value){
+    if (this.right.value) {
       return this.right.contains(target);
     }
-    if (this.left.value){
+    if (this.left.value) {
       return this.left.contains(target);
     }
   } 
@@ -38,13 +38,13 @@ BinarySearchTree.prototype.contains = function(target) {
 
 BinarySearchTree.prototype.depthFirstLog = function(callback) {
   //check if root is target
-  if (this.value){
+  if (this.value) {
     console.log(this.value);
     callback(this.value);
-    if (this.right.value){
-       this.right.depthFirstLog(callback);
+    if (this.right.value) {
+      this.right.depthFirstLog(callback);
     }
-    if (this.left.value){
+    if (this.left.value) {
       this.left.depthFirstLog(callback);
     }
   } 

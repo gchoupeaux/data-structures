@@ -39,7 +39,7 @@ Graph.prototype.removeNode = function(node) {
   // remove node from edge of other node 
   for (let i = 0; i < this.nodes.length; i++) {
     for (var j = 0; j < this.nodes[i].edges.length; j++) {
-      if (this.nodes[i].edges[j].value === node){
+      if (this.nodes[i].edges[j].value === node) {
         this.nodes[i].edges.splice(j, 1);
       }
     }
@@ -82,8 +82,7 @@ Graph.prototype.hasEdge = function(fromNode, toNode) {
 
 // Connects two nodes in a graph by adding an edge between them.
 Graph.prototype.addEdge = function(fromNode, toNode) {
-  var nodeStartIndex;
-  var nodeEndIndex;
+  var nodeStartIndex, nodeEndIndex; 
   var nbrNodeFound = 0;
 
   // find the 2 nodes using value
