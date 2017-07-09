@@ -36,10 +36,11 @@ BinarySearchTree.prototype.contains = function(target) {
   return false;
 };
 
+//should execute a callback on every value in a tree using "depthFirstLog"
 BinarySearchTree.prototype.depthFirstLog = function(callback) {
   //check if root is target
   if (this.value) {
-    console.log(this.value);
+    //console.log(this.value);
     callback(this.value);
     if (this.right.value) {
       this.right.depthFirstLog(callback);
@@ -49,3 +50,57 @@ BinarySearchTree.prototype.depthFirstLog = function(callback) {
     }
   } 
 };
+
+// BinarySearchTree.prototype.findNearestNum = function(target){
+//   //
+//   this.depthFirstLog(function(){
+
+//   });
+// }
+
+
+BinarySearchTree.prototype.minVal = function(){
+  var n = 0;
+  var node = this;
+  while(node.left.value){
+    console.log('node value' + n + ' ' + node.value);
+    node = node.left;
+    n ++;
+    console.log('node value' + n + ' ' + node.value);
+  }
+  return node.value;
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -155,3 +155,34 @@ Graph.prototype.forEachNode = function(cb) {
     //for each node, execute callback
 };
 
+Graph.prototype.maxEdgesNode = function() {
+  var edges = [];
+  for (var i = 0; i < this.nodes.length; i++) {
+    edges.push(this.nodes[i].edges.length);
+  }
+  return Math.max.apply(null, edges);
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

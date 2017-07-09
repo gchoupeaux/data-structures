@@ -90,7 +90,7 @@ HashTable.prototype.resize = function(length) {
   console.log('insert in new table');
   
 
-  for (var i = 0; i<tempArr.length; i++){
+  for (var i = 0; i < tempArr.length; i++) {
     this.insert(tempArr[i][0], tempArr[i][1]);
   }
   //rehash

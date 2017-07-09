@@ -18,6 +18,14 @@ setPrototype.remove = function(item) {
   delete(this._storage[item]);
 };
 
+setPrototype.size = function() {
+  return Object.keys(this._storage).length;
+};
+
+
+//Using your understanding of hash tables, refactor your set implementation 
+//from above to run in constant time
+
 /*
  * Complexity: What is the time complexity of the above functions?
  */

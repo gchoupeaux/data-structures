@@ -24,4 +24,13 @@ describe('set', function() {
     expect(set.contains('Mel Gibson')).to.equal(false);
   });
 
+  it('get the number of elements from a set', function() {
+    set.add('Mel Gibson');
+    set.add('Mel Gibso');
+    set.add('Mel Gibsn');
+    set.add('Mel Gibon');
+    set.add('Mel Gison');
+    set.add('Mel Gbson');
+    expect(set.size()).to.equal(6);
+  });
 });
